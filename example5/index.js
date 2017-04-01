@@ -132,7 +132,7 @@ createCellElement(maze.maze_cells);
 const oneStepRat = rat(maze.maze_cells, { x: 0, y: 0 }, { x: maze.maze_cells.length - 1, y: maze.maze_cells[0].length - 1 });
 
 +function () {
-  const step = ratStep.next();
+  const step = oneStepRat.next();
   if (!step.done) {
     if (step.value.go) {
       document.querySelectorAll('.row')[step.value.x].querySelectorAll('.cell')[step.value.y].style.background = 'red';
